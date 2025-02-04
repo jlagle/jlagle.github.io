@@ -11,7 +11,8 @@ main{
 
 h1{
     color:seagreen;
-    font-family:Helvetica
+    font-family:Helvetica;
+    /*-webkit-text-stroke-color:black;*/
 }
 
 h2{
@@ -29,4 +30,26 @@ a{
 a:hover{
     color:brown;
     text-decoration:none;
+}
+
+img{
+    width:40%;
+}
+
+figure{
+    text-align:center;
+    font-style:italic;
+}
+
+.indent{
+    margin-left:40px;
+}
+
+footer{
+    padding-top:150px;
+}
+
+.impact{
+    font-family: 'Segoe UI';
+    color:goldenrod;
 }
