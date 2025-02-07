@@ -1,5 +1,10 @@
 body{
     text-align:center;
     font-size:x-large;
+    margin-left:10%;
+    margin-right:10%;
 }
 
+footer p{
+    color:orange;
+}
