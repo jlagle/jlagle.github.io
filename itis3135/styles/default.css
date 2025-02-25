@@ -54,3 +54,18 @@ footer{
     font-family: 'Segoe UI';
     color:goldenrod;
 }
+
+body nav:last-of-type{
+    margin-top:20px;
+}
+
+#navSubtext a{
+    text-decoration: none;
+    background-color:#00000011;
+    padding:3px;
+    border-radius:4px;
+}
+#navSubtext a:hover{
+    text-decoration: underline;
+    background-color:#00000000;
+}
