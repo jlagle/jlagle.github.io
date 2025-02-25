@@ -19,8 +19,39 @@ h1{
 h2{
     text-align:center;
 }
+body h2{
+    margin-top:70px;
+    text-decoration: underline;
+}
+body div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between sections */
+    justify-content: center;
+}
+body section{
+    background-color:darksalmon;
+    flex: 1;
+    min-width: 300px; /* Prevents sections from becoming too small */
+    padding: 20px;
+    background-color: lightgray;
+    text-align: center;
+    border: 2px solid black;
+}
+body section p{
+    text-align:left;
+}
+body section ul li{
+    margin-top:7px;
+    text-align:left;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
 
-header, main, footer{
+header, main, footer, body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
