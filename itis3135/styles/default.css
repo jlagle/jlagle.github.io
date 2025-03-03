@@ -18,8 +18,6 @@ h1{
 
 h2{
     text-align:center;
-}
-body h2{
     margin-top:70px;
     text-decoration: underline;
 }
@@ -99,4 +97,26 @@ body nav:last-of-type{
 #navSubtext a:hover{
     text-decoration: underline;
     background-color:#00000000;
+}
+
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    body {
+        max-width: 1100px;
+        width: 95%;
+    }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px ) {
+    body {
+        max-width: 900px;
+        width: 95%;
+    }
+}
+
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    body {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 10px;
+    }
 }
