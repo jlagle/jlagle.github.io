@@ -3,17 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Jakob Lagle's Photography Hobby || Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #F5F5DC;
+            color: #6D4C41;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #2E7D32;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h2, h3 {
+            color: #A5BE00;
+        }
+
+        h1 {
+            color: #224d20;
+            font-weight: 700; 
+            font-size: 2rem;
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background-color: #F5F5DC;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            background-color: #2E7D32;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #90CAF9;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #6D4C41;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Nature Photography</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">🏠 Home</a> | 
+            <a href="#" onclick="showSection('about')">👤 About</a> | 
+            <a href="#" onclick="showSection('best-times')">🕰️ Best Times</a> | 
+            <a href="#" onclick="showSection('best-locations')">📍 Best Locations</a> | 
+            <a href="#" onclick="showSection('how')">🛠️ How</a> | 
+            <a href="#" onclick="showSection('why')">❓ Why</a> | 
+            <a href="#" onclick="showSection('ai-prompts')">🤖 AI Prompts</a>
+        </nav>
     </header>
-    <main>
 
+    <main class="container">
+
+        <section id="home" class="section active">
+            <h2>Home</h2>
+            <p><b>Welcome to my nature photography site!</b></p>
+            <p>Across these pages you can find collections of my favorite shots of various flowers, plants, animals, and insects. I've always loved the beauty of nature (specifically flowers) and want to try to capture it and share it with others. I hope you enjoy!</p>
+            <figure>
+                <img src="images/nature1.jpg" alt="Mountain view at sunrise">
+                <figcaption>Mountain view at sunrise</figcaption>
+            </figure>
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>Rocky Mountains</td>
+                    <td>Landscape</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>I’ve been passionate about nature photography for several years. Capturing landscapes, wildlife, and the subtle details of the outdoors has become my creative outlet.</p>
+            <figure>
+                <img src="images/nature2.jpg" alt="Close-up of a flower">
+                <figcaption>Close-up of a flower</figcaption>
+            </figure>
+            <p>I find peace and inspiration in the quiet moments spent outdoors.</p>
+        </section>
+
+
+        <section id="best-times" class="section">
+            <h2>Best Times</h2>
+            <p>The best lighting for photography often comes during golden hour—shortly after sunrise or before sunset. Overcast days are also great for reducing harsh shadows and getting even lighting.</p>
+            <figure>
+                <img src="images/nature3.jpg" alt="Sunset over a lake">
+                <figcaption>Sunset over a lake</figcaption>
+            </figure>
+            <p>Be patient and experiment with different times of day to find your unique style.</p>
+        </section>
+
+
+        <section id="best-locations" class="section">
+            <h2>Best Locations</h2>
+            <p>Some of my favorite spots include national parks, botanical gardens, and hiking trails. Coastal areas provide fantastic opportunities for capturing waves and wildlife.</p>
+            <figure>
+                <img src="images/nature4.jpg" alt="Forest trail">
+                <figcaption>Forest trail</figcaption>
+            </figure>
+            <p>Exploring different locations brings new inspiration and challenges.</p>
+        </section>
+
+
+        <section id="how" class="section">
+            <h2>How</h2>
+            <p>I use a DSLR camera with a variety of lenses depending on the subject. For landscapes, a wide-angle lens works best, while a macro lens is ideal for close-ups.</p>
+            <figure>
+                <img src="images/nature5.jpg" alt="Camera gear">
+                <figcaption>Camera gear</figcaption>
+            </figure>
+            <p>Using a tripod helps keep shots steady in low light conditions.</p>
+        </section>
+
+
+        <section id="why" class="section">
+            <h2>Why</h2>
+            <p>Nature photography allows me to slow down and appreciate the world around me. It helps me capture fleeting moments and share them with others.</p>
+            <figure>
+                <img src="images/nature6.jpg" alt="Mountain landscape">
+                <figcaption>Mountain landscape</figcaption>
+            </figure>
+            <p>Sharing these photos lets others see the beauty I experience.</p>
+        </section>
     </main>
-    <footer>
 
+    <footer>
+        <p>Page built by <a href="https://lagle.co">Lagle &amp; Co.</a> &copy; 2025</p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        window.onload = () => showSection('home');
+    </script>
+    <script src="scripts/htmlinclude.min.js"></script>
 </body>
 </html>
