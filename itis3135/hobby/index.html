@@ -60,6 +60,21 @@
             padding: 1rem;
         }
 
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 130%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
         .section {
             display: none;
         }
@@ -69,7 +84,8 @@
         }
 
         img {
-            width: 100%;
+            width: 90%;
+            max-width: 600px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -90,9 +106,36 @@
             text-align: center;
         }
 
+        .image-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .image-row figure {
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .larger-img{
+            width:120%;
+        }
+
+        .smaller-img{
+            width:80%;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8rem;
+            }
+            .image-row {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .image-row figure {
+                max-width: 100%;
             }
         }
     </style>
@@ -102,13 +145,13 @@
     <header>
         <h1>Nature Photography</h1>
         <nav>
-            <a href="#" onclick="showSection('home')">🏠 Home</a> | 
-            <a href="#" onclick="showSection('about')">👤 About</a> | 
-            <a href="#" onclick="showSection('best-times')">🕰️ Best Times</a> | 
-            <a href="#" onclick="showSection('best-locations')">📍 Best Locations</a> | 
-            <a href="#" onclick="showSection('how')">🛠️ How</a> | 
-            <a href="#" onclick="showSection('why')">❓ Why</a> | 
-            <a href="#" onclick="showSection('ai-prompts')">🤖 AI Prompts</a>
+            <a href="#" onclick="showSection('home')">Home</a> 🔸 
+            <a href="#" onclick="showSection('about')">About</a> 🔸 
+            <a href="#" onclick="showSection('best-times')">Best Times</a> 🔸
+            <a href="#" onclick="showSection('best-locations')">Best Locations</a> 🔸
+            <a href="#" onclick="showSection('how')">How</a> 🔸
+            <a href="#" onclick="showSection('why')">Why</a> 🔸
+            <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
         </nav>
     </header>
 
@@ -118,18 +161,28 @@
             <h2>Home</h2>
             <p><b>Welcome to my nature photography site!</b></p>
             <p>Across these pages you can find collections of my favorite shots of various flowers, plants, animals, and insects. I've always loved the beauty of nature (specifically flowers) and want to try to capture it and share it with others. I hope you enjoy!</p>
-            <figure>
-                <img src="images/nature1.jpg" alt="Mountain view at sunrise">
-                <figcaption>Mountain view at sunrise</figcaption>
-            </figure>
+            <div class="image-row">
+                <figure>
+                    <img src="images/white-bell-flower-hanging.png" alt="Haning White Bell Flower">
+                    <figcaption>Hanging white bell flower</figcaption>
+                </figure>
+                <figure>
+                    <img class="larger-img" src="images/yellow-framed-flower.png" alt="Yellow Framed Flower">
+                    <figcaption>Yellow framed flower</figcaption>
+                </figure>
+            </div>
             <table>
                 <tr>
                     <th>Location</th>
                     <th>Type</th>
                 </tr>
                 <tr>
-                    <td>Rocky Mountains</td>
-                    <td>Landscape</td>
+                    <td>UNCC Botanical Gardens</td>
+                    <td>Close-up</td>
+                </tr>
+                <tr>
+                    <td>UNCC Botanical Gardens</td>
+                    <td>Framed close-up</td>
                 </tr>
             </table>
         </section>
@@ -137,56 +190,86 @@
 
         <section id="about" class="section">
             <h2>About</h2>
-            <p>I’ve been passionate about nature photography for several years. Capturing landscapes, wildlife, and the subtle details of the outdoors has become my creative outlet.</p>
+            <p>I have been passionate about nature photography for several years. Capturing close-ups, wildlife, and the subtle details of the outdoors has become my creative outlet.</p>
             <figure>
-                <img src="images/nature2.jpg" alt="Close-up of a flower">
-                <figcaption>Close-up of a flower</figcaption>
+                <img class="larger-img" src="images/white-pink-flower.png" alt="White and pink framed flower">
+                <figcaption>White and pink framed flower</figcaption>
             </figure>
-            <p>I find peace and inspiration in the quiet moments spent outdoors.</p>
+            <p>I use photography as an outlet to express myself and show people what I also enjoy. It is also a stress reliever and a fun activity I love to do in my free time.</p>
         </section>
 
 
         <section id="best-times" class="section">
             <h2>Best Times</h2>
-            <p>The best lighting for photography often comes during golden hour—shortly after sunrise or before sunset. Overcast days are also great for reducing harsh shadows and getting even lighting.</p>
+            <p>The best lighting for photography often comes during golden hour—shortly after sunrise or before sunset. Overcast days are also great for reducing harsh shadows and getting even lighting. On the exact contrary, I love to experimenting with extreme contrast.</p>
             <figure>
-                <img src="images/nature3.jpg" alt="Sunset over a lake">
-                <figcaption>Sunset over a lake</figcaption>
+                <img class="smaller-img" src="images/table-in-extreme-contrast.png" alt="Table in extreme contrast">
+                <figcaption>Table in extreme contrast</figcaption>
             </figure>
-            <p>Be patient and experiment with different times of day to find your unique style.</p>
+            <p>When starting I had to be patient and experiment with different times of day to find out how to take pictures I like.</p>
         </section>
 
 
         <section id="best-locations" class="section">
             <h2>Best Locations</h2>
-            <p>Some of my favorite spots include national parks, botanical gardens, and hiking trails. Coastal areas provide fantastic opportunities for capturing waves and wildlife.</p>
-            <figure>
-                <img src="images/nature4.jpg" alt="Forest trail">
-                <figcaption>Forest trail</figcaption>
-            </figure>
-            <p>Exploring different locations brings new inspiration and challenges.</p>
+            <p>My favorite and most reliable spot I have found are the botanical gardens at UNC Charlotte. The gardens are easily accessible, close to me, and always have amazing flowers and wildlife.</p>
+            <div class="image-row">
+                <figure>
+                    <img class="larger-img" src="images/orange-flower-framed.png" alt="Orange framed flower">
+                    <figcaption>Orange framed flower</figcaption>
+                </figure>
+                <figure>
+                    <img class="larger-img" src="images/hydrangea.png" alt="Hydrangea">
+                    <figcaption>Hydrangea</figcaption>
+                </figure>
+            </div>
+            <p>I hope in the future I get more time to explore more areas and find cooler places to take pictures at.</p>
         </section>
 
 
         <section id="how" class="section">
             <h2>How</h2>
-            <p>I use a DSLR camera with a variety of lenses depending on the subject. For landscapes, a wide-angle lens works best, while a macro lens is ideal for close-ups.</p>
+            <p>I unfortunately can not afford my own camera, but instead I rent a camera from the UNCC library. I use the Canon EOS Rebel T7i 2 Lens Kit with lenses of 18-55mm and 55-250mm.</p>
             <figure>
-                <img src="images/nature5.jpg" alt="Camera gear">
-                <figcaption>Camera gear</figcaption>
+                <img src="images/canon-eos-rebel-t7i.png" alt="Canon EOS Rebel T7i">
+                <figcaption>Canon EOS Rebel T7i</figcaption>
             </figure>
-            <p>Using a tripod helps keep shots steady in low light conditions.</p>
+            <p>It takes experimenting and a lot of patience  to figure out how and when to use certain lenses and how to get the correct depth, focus, and zoom.</p>
         </section>
 
 
         <section id="why" class="section">
             <h2>Why</h2>
-            <p>Nature photography allows me to slow down and appreciate the world around me. It helps me capture fleeting moments and share them with others.</p>
-            <figure>
-                <img src="images/nature6.jpg" alt="Mountain landscape">
-                <figcaption>Mountain landscape</figcaption>
-            </figure>
+            <p>Nature photography allows me to capture and visualize the world around me. It helps me take snapshots in time and share them with others.</p>
+            <div class="img-container">
+                <figure>
+                    <img src="images/bee-hanging-off-of-flower.png" alt="Bee on flower">
+                    <figcaption>Bee on flower</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/robin-side-profile.png" alt="Robin on branch">
+                    <figcaption>Robin on branch</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/side-profile-orange-belly-bird.png" alt="Side profile of bird">
+                    <figcaption>Orange-bellied bird side profile</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/butterfly-on-yellow-flower.png" alt="Butterfly on flower">
+                    <figcaption>Butterfly on flower</figcaption>
+                </figure>
+            </div>
             <p>Sharing these photos lets others see the beauty I experience.</p>
+        </section>
+
+        <section id="ai-prompts" class="section">
+            <h2>AI Prompts</h2>
+            <p>Here are the couple of prompts that I used to help me along the process of making this website:</p>
+            <ul>
+                <li>Please generate a color scheme for a nature-related page.</li>
+                <li>Give a good example of how to emphasize the title on my page.</li>
+                <li>How can I have multiple pages be hidden and shown on one page with JS.</li>
+            </ul>
         </section>
     </main>
 
