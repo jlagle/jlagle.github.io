@@ -88,6 +88,23 @@ body nav:last-of-type{
     margin-top:20px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #444;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 #navSubtext a{
     text-decoration: none;
     background-color:#00000011;
