@@ -113,10 +113,9 @@ body nav:last-of-type{
     }
 }
 
-@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+@media screen and (min-width: 370px) and (max-width: 600px) {
     body {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 10px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto; 
     }
 }
