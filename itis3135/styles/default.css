@@ -43,11 +43,6 @@ body section ul li{
     margin-top:7px;
     text-align:left;
 }
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
 
 header, main, footer, body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -116,6 +111,64 @@ tr:nth-child(even) {
     background-color:#00000000;
 }
 
+form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+label.required::after {
+    content: " *";
+    color: red;
+}
+input, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    background-color: seagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: darkgreen;
+}
+#courses-container div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+#courses-container input {
+    flex: 1;
+}
+#courses-container button {
+    width: auto;
+    background-color: crimson;
+}
+#courses-container button:hover {
+    background-color: darkred;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     body {
         max-width: 1100px;
@@ -134,5 +187,11 @@ tr:nth-child(even) {
     body {
         max-width: calc(100% - 20px);
         margin: 0 auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 }
