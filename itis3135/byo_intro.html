@@ -10,12 +10,15 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <h1>BYO Introduction Page</h1>
+        <h1 style="text-align:center">BYO Introduction Page</h1>
         <h2>Please fill out the form below and let the website build your very own introduction page.</h2>
 
         <form>
-            <label for="name" class="required">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="fname" class="required">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname" class="required">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
 
             <label for="mascot" class="required">Mascot:</label>
             <input type="text" id="mascot" name="mascot" required>
@@ -41,15 +44,15 @@
             <label for="platform" class="required">Primary Computer Platform:</label>
             <input type="text" id="platform" name="platform" required>
 
-            <label>Courses currently taking:</label>
+            <label>Courses Currently Taking:</label>
             <div id="courses-container">
                 <button type="button" onclick="addCourseField()">Add Course</button>
             </div>
 
-            <label for="funny">Funny thing?</label>
+            <label for="funny">Add a Funny Thing?</label>
             <input type="text" id="funny" name="funny">
 
-            <label for="anything">Anything else?</label>
+            <label for="anything">Anything Else?</label>
             <input type="text" id="anything" name="anything">
 
             <div class="checkbox-container">

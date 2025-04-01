@@ -1,27 +1,27 @@
+const form = document.querySelector("form");
+const coursesContainer = document.getElementById("courses-container");
 
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+        alert("Please fill out all required fields.");
+        return;
+    }
+    displayFormData();
+});
 
+form.addEventListener("reset", function () {
+    setTimeout(() => location.reload(), 100);
+});
 
 function addCourseField() {
     let container = document.getElementById("courses-container");
     let wrapper = document.createElement("div");
+    wrapper.classList.add("course-entry");
     
-    let courseId = document.createElement("input");
-    courseId.type = "text";
-    courseId.name = "course_id[]";
-    courseId.placeholder = "Course ID";
-    courseId.required = true;
-    
-    let courseName = document.createElement("input");
-    courseName.type = "text";
-    courseName.name = "course_name[]";
-    courseName.placeholder = "Course Name";
-    courseName.required = true;
-    
-    let courseReason = document.createElement("input");
-    courseReason.type = "text";
-    courseReason.name = "course_reason[]";
-    courseReason.placeholder = "Reason for taking course";
-    courseReason.required = true;
+    let courseId = createInput("text", "course_id[]", "Course ID", true);
+    let courseName = createInput("text", "course_name[]", "Course Name", true);
+    let courseReason = createInput("text", "course_reason[]", "Reason for taking course", true);
     
     let deleteButton = document.createElement("button");
     deleteButton.type = "button";
@@ -30,10 +30,71 @@ function addCourseField() {
         container.removeChild(wrapper);
     };
     
-    wrapper.appendChild(courseId);
-    wrapper.appendChild(courseName);
-    wrapper.appendChild(courseReason);
-    wrapper.appendChild(deleteButton);
+    wrapper.append(courseId, courseName, courseReason, deleteButton);
     container.appendChild(wrapper);
 }
 
+function createInput(type, name, placeholder, required) {
+    let input = document.createElement("input");
+    input.type = type;
+    input.name = name;
+    input.placeholder = placeholder;
+    if (required) input.required = true;
+    return input;
+}
+
+function displayFormData() {
+    let formData = new FormData(document.querySelector("form"));
+    let resultContainer = document.createElement("div");
+    
+    let fullName = `<h1>${formData.get("fname")} ${formData.get("lname")} || Jumpy Lemur</h1>`;
+    resultContainer.innerHTML += fullName;
+    
+    let imgSrc = formData.get("image") ? `<figure><img src="${URL.createObjectURL(formData.get("image"))}" alt="${formData.get("fname")} ${formData.get("lname")}"><figcaption>${formData.get("caption")}</figcaption></figure>` : "";
+    resultContainer.innerHTML += imgSrc;
+    
+    let sections = {
+        "Personal Background": "personal",
+        "Professional Background": "professional",
+        "Academic Background": "academic",
+        "Background in this Subject": "webdev",
+        "Primary Computer Platform": "platform"
+    };
+    
+    let list = "<ul>";
+    for (let [label, key] of Object.entries(sections)) {
+        let value = formData.get(key);
+        if (value) list += `<li><b>${label}: </b>${value}</li>`;
+    }
+    
+    let courses = formData.getAll("course_name[]");
+    if (courses.length > 0) {
+        let courseList = `<li><b>Courses I'm Taking & Why:</b><ul>`;
+        courses.forEach((course, index) => {
+            courseList += `<li><b>${formData.getAll("course_id[]")[index]} (${course}): </b>${formData.getAll("course_reason[]")[index]}</li>`;
+        });
+        courseList += `</ul></li>`;
+        list += courseList;
+    }
+    
+    let additionalSections = {
+        "Funny/Interesting Item About Myself": "funny",
+        "I'd also Like to Share": "anything"
+    };
+    
+    for (let [label, key] of Object.entries(additionalSections)) {
+        let value = formData.get(key);
+        if (value) list += `<li><b>${label}: </b>${value}</li>`;
+    }
+    
+    list += "</ul>";
+    resultContainer.innerHTML += list;
+    
+    let resetButton = document.createElement("button");
+    resetButton.innerText = "Reset";
+    resetButton.onclick = function () { location.reload(); };
+    
+    document.querySelector("main").innerHTML = "";
+    document.querySelector("main").appendChild(resultContainer);
+    document.querySelector("main").appendChild(resetButton);
+}
