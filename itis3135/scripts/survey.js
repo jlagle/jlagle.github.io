@@ -1,56 +1,26 @@
 const form = document.querySelector("form");
 const coursesContainer = document.getElementById("courses-container");
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (!form.checkValidity()) {
-        alert("Please fill out all required fields.");
-        return;
-    }
-    displayFormData();
-});
-
-form.addEventListener("reset", function () {
-    setTimeout(() => location.reload(), 100);
-});
-
-function addCourseField() {
-    let container = document.getElementById("courses-container");
-    let wrapper = document.createElement("div");
-    wrapper.classList.add("course-entry");
-    
-    let courseId = createInput("text", "course_id[]", "Course ID", true);
-    let courseName = createInput("text", "course_name[]", "Course Name", true);
-    let courseReason = createInput("text", "course_reason[]", "Reason for taking course", true);
-    
-    let deleteButton = document.createElement("button");
-    deleteButton.type = "button";
-    deleteButton.innerText = "Delete";
-    deleteButton.onclick = function () {
-        container.removeChild(wrapper);
-    };
-    
-    wrapper.append(courseId, courseName, courseReason, deleteButton);
-    container.appendChild(wrapper);
-}
-
-function createInput(type, name, placeholder, required) {
-    let input = document.createElement("input");
-    input.type = type;
-    input.name = name;
-    input.placeholder = placeholder;
-    if (required) input.required = true;
-    return input;
-}
-
 function displayFormData() {
     let formData = new FormData(document.querySelector("form"));
     let resultContainer = document.createElement("div");
+    resultContainer.style.maxWidth = "800px";
+    resultContainer.style.margin = "0 auto";
     
-    let fullName = `<h1>${formData.get("fname")} ${formData.get("lname")} || Jumpy Lemur</h1>`;
+    let fullName = `<div style="display: block; text-align: center; margin-top: 20px;"><h1>${formData.get("fname")} ${formData.get("lname")} || Jumpy Lemur</h1></div>`;
     resultContainer.innerHTML += fullName;
     
-    let imgSrc = formData.get("image") ? `<figure><img src="${URL.createObjectURL(formData.get("image"))}" alt="${formData.get("fname")} ${formData.get("lname")}"><figcaption>${formData.get("caption")}</figcaption></figure>` : "";
+    let imgSrc = formData.get("image") 
+    ? `<div style="display: block; text-align: center; margin-top: 20px;">
+        <figure>
+            <img src="${URL.createObjectURL(formData.get("image"))}" 
+                 alt="${formData.get("fname")} ${formData.get("lname")}" 
+                 style="display: block; margin: 0 auto; width: 60%; max-width: 900px;">
+            <figcaption><em>${formData.get("caption")}</em></figcaption>
+        </figure>
+       </div>` 
+    : "";
+    resultContainer.innerHTML += "<br>";
     resultContainer.innerHTML += imgSrc;
     
     let sections = {
@@ -98,3 +68,47 @@ function displayFormData() {
     document.querySelector("main").appendChild(resultContainer);
     document.querySelector("main").appendChild(resetButton);
 }
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+        alert("Please fill out all required fields.");
+        return;
+    }
+    displayFormData();
+});
+
+form.addEventListener("reset", function () {
+    setTimeout(() => location.reload(), 100);
+});
+
+function createInput(type, name, placeholder, required) {
+    let input = document.createElement("input");
+    input.type = type;
+    input.name = name;
+    input.placeholder = placeholder;
+    if (required) input.required = true;
+    return input;
+}
+
+function addCourseField() {
+    let container = document.getElementById("courses-container");
+    let wrapper = document.createElement("div");
+    wrapper.classList.add("course-entry");
+    
+    let courseId = createInput("text", "course_id[]", "Course ID", true);
+    let courseName = createInput("text", "course_name[]", "Course Name", true);
+    let courseReason = createInput("text", "course_reason[]", "Reason for taking course", true);
+    
+    let deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.innerText = "Delete";
+    deleteButton.onclick = function () {
+        container.removeChild(wrapper);
+    };
+    
+    wrapper.append(courseId, courseName, courseReason, deleteButton);
+    container.appendChild(wrapper);
+}
+
+

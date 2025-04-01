@@ -60,9 +60,40 @@ img{
     width:40%;
 }
 
-figure{
-    text-align:center;
-    font-style:italic;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+figure {
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.wireframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+@media (max-width: 900px) {
+    figure {
+        width: 48%; /* Keeps figures next to each other on medium screens */
+    }
+}
+@media (max-width: 600px) {
+    figure {
+        width: 100%; /* Stacks figures on smaller screens */
+    }
+}
+.sitemap{
+    width:1200px;
 }
 
 .indent{
@@ -99,13 +130,13 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#navSubtext a{
+#nav-subtext a{
     text-decoration: none;
     background-color:#00000011;
     padding:3px;
     border-radius:4px;
 }
-#navSubtext a:hover{
+#nav-subtext a:hover{
     text-decoration: underline;
     background-color:#00000000;
 }
@@ -123,7 +154,7 @@ label {
     font-weight: bold;
     margin-top: 10px;
 }
-label.required::after {
+.required::after {
     content: " *";
     color: red;
 }
