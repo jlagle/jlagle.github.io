@@ -49,6 +49,24 @@ body {
   text-decoration: underline;
 }
 
+.subnav {
+  text-align: center;
+  font-weight: 800;
+  font-size: x-large;
+  padding-bottom: 30px;
+}
+
+.subnav a{
+  text-decoration: none;
+  color:#1d3557;
+  padding: .3rem 1rem;
+  border: 2px solid #e63946
+}
+
+.subnav a:hover{
+  text-decoration: underline;
+}
+
 /* Main Content */
 .main-content {
   flex: 1;
