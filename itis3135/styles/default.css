@@ -1,3 +1,5 @@
+
+
 body{
     background-color:blanchedalmond;
     text-align:center;
@@ -5,14 +7,18 @@ body{
     margin:0 auto;
     width:90%;
 }
-main{
+
+main {
+    background-color: #fffcfc96;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
     text-align:left;
 }
-
 h1{
     color:seagreen;
     font-family:Helvetica;
-    /*-webkit-text-stroke-color:black;*/
 }
 
 h2{
@@ -23,13 +29,13 @@ h2{
 body div{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adds space between sections */
+    gap: 20px;
     justify-content: center;
 }
 body section{
     background-color:darksalmon;
     flex: 1;
-    min-width: 300px; /* Prevents sections from becoming too small */
+    min-width: 300px;
     padding: 20px;
     background-color: lightgray;
     text-align: center;
@@ -67,9 +73,10 @@ img{
     justify-content: center;
 }
 figure {
-    max-width: 500px;
+    max-width: 600px;
     text-align: center;
     box-sizing: border-box;
+    margin:0 auto
 }
 .wireframe {
     width: 100%;
@@ -84,16 +91,17 @@ figcaption {
 }
 @media (max-width: 900px) {
     figure {
-        width: 48%; /* Keeps figures next to each other on medium screens */
+        width: 48%;
     }
 }
 @media (max-width: 600px) {
     figure {
-        width: 100%; /* Stacks figures on smaller screens */
+        width: 100%;
     }
 }
-.sitemap{
-    width:1200px;
+
+.sitemap {
+    width: 100%;
 }
 
 .indent{
@@ -220,6 +228,13 @@ button:hover {
     height: auto;
     object-fit: cover;
     border: 2px solid #444;
+}
+
+.intro-img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
 }
 
 .caption {
