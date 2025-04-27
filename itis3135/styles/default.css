@@ -284,6 +284,9 @@ button:hover {
     color: seagreen;
     text-decoration: underline;
 }
+.review-list li{
+    margin-bottom:10px;
+}
 
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     body {

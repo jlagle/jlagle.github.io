@@ -159,10 +159,15 @@ header p {
 .footer a {
   color: #f1faee;
   text-decoration: none;
+  background-color:rgba(0, 0, 0, 0.3);
+  padding:5px;
+  border-radius: 5px;
 }
 
 .footer a:hover {
   text-decoration: underline;
+  background-color:rgba(0, 0, 0, 0.0);
+  color:#e63946;
 }
 
 .showheader{
@@ -237,10 +242,6 @@ header p {
 
 .board-photos a:hover {
   text-decoration: underline;
-}
-
-h2{
-  
 }
 
 @media (max-width: 900px) {
