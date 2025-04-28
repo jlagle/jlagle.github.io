@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <title>MOVE Dance Alliance || Past Showcases</title>
+  <link rel="stylesheet" href="non-pages/cDefault.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Past Showcases</h1>
+    <p>A look back at some of our most iconic performances.</p>
+  </header>
+
+  <div data-include="non-pages/navbar.html"></div>
+
+  <main class="main-content">
+
+    <nav class="subnav">
+      <a href="#s25">Spring 2025</a>
+      <a href="#f24">Fall 2024</a>
+      <a href="#f23">Fall 2023</a>
+    </nav>
+
+    <h2  id="s25" class="showheader">2025 Spring Showcase</h2>
+    <div class="photos">
+      <figure>
+        <img src="photos/spring25d1.jpg" alt="Spring 2025 Picture 1" />
+        <figcaption>Pre-show</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/spring25d2.jpg" alt="Spring 2025 Picture 2" />
+        <figcaption>Smother</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/spring25d3.jpg" alt="Spring 2025 Picture 3" />
+        <figcaption>Evacuate the Dancefloor</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/spring25d4.jpg" alt="Spring 2025 Picture 4" />
+        <figcaption>Production</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="f24" class="showheader">2024 Fall Showcase</h2>
+    <div class="photos" >
+      <figure>
+        <img src="photos/fall24d1.jpg" alt="Fall 2024 Picture 1" />
+        <figcaption>Post-show</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/fall24d2.jpg" alt="Fall 2024 Picture 2" />
+        <figcaption>Adreniline Rsh</figcaption> <!-- FIX SPEPLLING NAD SHTIE-->
+      </figure>
+      <figure>
+        <img src="photos/fall24d3.jpg" alt="Fall 2024 Picture 3" />
+        <figcaption>Ice</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/fall24d4.jpg" alt="Fall 2024 Picture 4" />
+        <figcaption>The Boy is Mine</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/fall24d5.jpg" alt="Fall 2024 Picture 5" />
+        <figcaption>Chichiro - billie</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="f23" class="showheader">2023 Fall Showcase</h2>
+    <div class="photos" >
+      <figure>
+        <img src="photos/fall23d1.jpeg" alt="Fall 2023 Picture 1" />
+        <figcaption>Opener</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/fall23d2.jpeg" alt="Fall 2023 Picture 2" />
+        <figcaption>I'm Tired</figcaption>
+      </figure>
+      <figure>
+        <img src="photos/fall23d3.JPG" alt="Fall 2023 Picture 3" />
+        <figcaption>Vulgar</figcaption>
+      </figure>
+    </div>
+
+
+  </main>
+
+  <div data-include="non-pages/cFooter.html"></div>
+
+  <script src="../scripts/htmlinclude.min.js"></script>
+</body>
+</html>

@@ -16,27 +16,49 @@
   <div data-include="non-pages/navbar.html"></div>
 
   <main class="main-content">
+
     <h2 class="showheader">Meet the Team</h2>
+    <p style="text-align:center; font-size: medium; font-weight: 200;">(Click to flip over the image)</p>
+
     <div class="board-photos">
-      <div>
+      <div class="flip-card">
         <img src="photos/president.jpg" alt="President headshot">
-        <p><strong>Sage Walker</strong><br>President</p>
+        <div class="card-info">
+          <h3>Sage Walker</h3>
+          <p>President </p>
+        </div>
       </div>
-      <div>
+    
+      <div class="flip-card" onclick="flipCard(this)">
         <img src="photos/vp.jpg" alt="VP headshot">
-        <p><strong>Eva Politis</strong><br>Vice President</p>
+        <div class="card-info">
+          <h3>Eva Politis</h3>
+          <p>Vice President</p>
+        </div>
       </div>
-      <div>
+    
+      <div class="flip-card" onclick="flipCard(this)">
         <img src="photos/secretary.jpg" alt="Secretary headshot">
-        <p><strong>Alisha Edwards</strong><br>Secretary</p>
+        <div class="card-info">
+          <h3>Alisha Edwards</h3>
+          <p>Secretary</p>
+        </div>
       </div>
-      <div>
+    
+      <div class="flip-card" onclick="flipCard(this)">
         <img src="photos/treasurer.jpg" alt="Treasurer headshot">
-        <p><strong>Anna Hancock</strong><br>Treasurer</p>
+        <div class="card-info">
+          <h3>Anna Hancock</h3>
+          <p>Treasurer</p>
+        </div>
       </div>
-      <div>
+    
+      <div class="flip-card" onclick="flipCard(this)">
         <img src="photos/boardmember.jpg" alt="Board member headshot">
-        <p><strong>Aliyah March</strong><br>Board Member</p>
+        <div class="card-info">
+          <h3>Aliyah March</h3>
+          <p>Board Member</p>
+        </div>
       </div>
     </div>
   </main>
@@ -44,5 +66,6 @@
   <div data-include="non-pages/cFooter.html"></div>
 
   <script src="../scripts/htmlinclude.min.js"></script>
+  <script src="non-pages/client.js"></script>
 </body>
 </html>
