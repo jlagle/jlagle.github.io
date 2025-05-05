@@ -227,7 +227,6 @@ button:hover {
     width: 90%;
     height: auto;
     object-fit: cover;
-    border: 2px solid #444;
 }
 
 .intro-img {
@@ -257,7 +256,6 @@ button:hover {
 .thumb {
     width: 100px;
     height: auto;
-    border: 2px solid transparent;
     cursor: pointer;
 }
 
@@ -279,7 +277,7 @@ button:hover {
     text-align: left;
 }
 
-.notes h2 {
+.notesh2 {
     text-align: center;
     color: seagreen;
     text-decoration: underline;

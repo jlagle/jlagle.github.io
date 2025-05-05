@@ -177,7 +177,7 @@ header p {
 }
 
 .thin{
-  margin:0 30%;
+  margin:0 20%;
 }
 
 .intro-with-images {
@@ -260,7 +260,6 @@ header p {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 2px solid #444;
 }
 
 .thumbnails {
@@ -274,7 +273,6 @@ header p {
 .thumb {
   width: 100px;
   height: auto;
-  border: 2px solid transparent;
   cursor: pointer;
 }
 
